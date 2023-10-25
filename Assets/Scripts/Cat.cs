@@ -79,6 +79,10 @@ public class Cat : MonoBehaviour
             condition_met = true;
             logic.Win();
         }
+        if (collision.gameObject.CompareTag("Hostile")) {
+            condition_met = true;
+            logic.GameOver();
+        }
     }
     void OnTriggerExit2D(Collider2D collision)
     {
